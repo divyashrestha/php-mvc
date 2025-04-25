@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "78cf0342718a95d402cf6ec76e4cd5a5",
+    "packages": [
+        {
+            "name": "divyashrestha/mvc",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/divyashrestha/mvc.git",
+                "reference": "39022be4f7fc53d333ec57582701b02c164021b5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "divyashrestha\\Mvc\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Divya Shrestha",
+                    "email": "work@divyashrestha.com.np"
+                }
+            ],
+            "description": "A simple php framework",
+            "time": "2025-04-25T17:47:22+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "divyashrestha/mvc": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

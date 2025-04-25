@@ -1,0 +1,21 @@
+{
+    "name": "divyashrestha/php-mvc",
+    "description": "A simple MVC frame work created for small project",
+    "type": "project",
+    "require": {
+        "divyashrestha/mvc": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/divyashrestha/mvc.git"
+        }
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Divya Shrestha",
+            "email": "work@divyashrestha.com.np"
+        }
+    ]
+}
