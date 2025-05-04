@@ -2,8 +2,8 @@
 
 use divyashrestha\Mvc\Application;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 extract($config);
 
@@ -34,12 +34,12 @@ if ($APP_ENV == 'development') {
     ini_set('display_errors', 'On');
 }
 
-$app = new Application(dirname(__DIR__), $app_config);
+$app = new Application(__DIR__, $app_config);
 
 $app->on(Application::EVENT_BEFORE_REQUEST, function () {
     // echo "Before request from second installation";
 });
 
 
-require_once __DIR__ . '/../routes/web.php';
+require_once __DIR__ . '/routes/web.php';
 $app->run();
