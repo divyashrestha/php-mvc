@@ -1,4 +1,19 @@
 RewriteEngine On
+
+# Redirect all requests to index.php if not an existing file or directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php
+RewriteRule ^ index.php [L]
+
+# Block access to sensitive files
+<FilesMatch "(migration.php|config.php|composer.lock|composer.json|.gitignore|.editorconfig)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to restricted directories
+RewriteRule ^(vendor|runtime|routes|migrations|app)/ - [F]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
