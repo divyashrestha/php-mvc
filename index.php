@@ -25,7 +25,7 @@ $app_config = [
         'username' => $MAIL_USERNAME,
         'password' => $MAIL_PASSWORD,
         'encryption' => $MAIL_ENCRYPTION,
-        'from_address' => $MAIL_ENCRYPTION,
+        'from_address' => $MAIL_FROM_ADDRESS,
     ]
 ];
 
